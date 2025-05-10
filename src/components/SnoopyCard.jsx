@@ -14,7 +14,7 @@ function SnoopyCard({ snoopy }) {
   return (
     <div className="bg-white border border-gray-300 rounded-2xl shadow-sm p-6">
       <h2 className="text-2xl font-bold mt-4">{snoopy.name}</h2>
-      <div className="w-104 h-128 mx-auto border border-gray-200 rounded-xl overflow-hidden">
+      <div className="w-full max-w-[24rem] aspect-[3/4] sm:w-[26rem] sm:h-[32rem] mx-auto border border-gray-200 rounded-xl overflow-hidden">
         <img
           src={snoopy.image}
           alt={snoopy.name}
