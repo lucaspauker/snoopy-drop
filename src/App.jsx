@@ -14,8 +14,16 @@ const rarityOrder = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary'];
 
 function App() {
   const [current, setCurrent] = useState(null);
-  const [count, setCount] = useState(0);
-  const [seen, setSeen] = useState(new Set());
+
+  const [count, setCount] = useState(() => {
+    const stored = localStorage.getItem('dropCount');
+    return stored ? parseInt(stored, 10) : 0;
+  });
+
+  const [seen, setSeen] = useState(() => {
+    const stored = localStorage.getItem('seenSnoopys');
+    return stored ? new Set(JSON.parse(stored)) : new Set();
+  });
 
   const getRandomWeighted = () => {
     const weights = snoopys.map(s => 1 - s.rarity);
@@ -42,9 +50,19 @@ function App() {
     });
   };
 
+  const handleRefresh = () => {
+    localStorage.removeItem('seenSnoopys');
+    localStorage.removeItem('dropCount');
+    window.location.reload();
+  };
+
   useEffect(() => {
-    handleDrop();
-  }, []);
+    localStorage.setItem('dropCount', count.toString());
+  }, [count]);
+
+  useEffect(() => {
+    localStorage.setItem('seenSnoopys', JSON.stringify(Array.from(seen)));
+  }, [seen]);
 
   const rarityGroups = snoopys.reduce((acc, s) => {
     const { label } = getRarityLabel(s.rarity);
@@ -55,7 +73,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex justify-center pt-8 sm:pt-16">
-      <div className="w-full max-w-2xl px-2 sm:px-4 text-center pb-10 sm:pb-20">
+      <div className="w-full max-w-2xl px-2 sm:px-4 text-center pb-20">
         <h1 className="text-4xl font-bold mb-6">Snoopy Drop</h1>
 
         {/* Stats + Desktop Button */}
@@ -124,6 +142,13 @@ function App() {
             );
           })}
         </div>
+
+        <button
+          onClick={handleRefresh}
+          className="bg-yellow-300 hover:bg-yellow-400 text-black font-bold py-3 px-6 text-base rounded-2xl"
+        >
+          🔁 Reset Progress
+        </button>
       </div>
     </div>
   );
