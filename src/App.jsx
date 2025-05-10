@@ -6,7 +6,6 @@ function App() {
   const [current, setCurrent] = useState(null);
   const [count, setCount] = useState(0);
   const [seen, setSeen] = useState(new Set());
-  const [showDropdown, setShowDropdown] = useState(false);
   const hasInitialized = useRef(false);
   const rarityOrder = ["Common", "Uncommon", "Rare", "Epic", "Legendary"];
 
@@ -60,51 +59,6 @@ function App() {
             <p>
               You've seen {count} Snoopy{count !== 1 && 's'} so far!
             </p>
-
-            <div className="relative text-left">
-              <button
-                onClick={() => setShowDropdown(prev => !prev)}
-                className="flex items-center gap-1 text-sm text-gray-600 hover:text-gray-800"
-              >
-                <span className="underline">Seen Snoopys</span>
-                <span
-                  className={`transition-transform duration-200 ${
-                    showDropdown ? 'rotate-180' : ''
-                  }`}
-                >
-                  ▼
-                </span>
-              </button>
-
-              {showDropdown && (
-                <div className="absolute left-0 mt-2 w-64 bg-white border border-gray-300 p-4 rounded-xl text-sm shadow-lg z-50 max-h-80 overflow-y-auto">
-                {rarityOrder
-                  .filter(label => rarityGroups[label])
-                  .map(label => {
-                    const group = rarityGroups[label];
-                    const seenCount = group.filter(s => seen.has(s.id)).length;
-
-                    return (
-                      <div key={label} className="mb-2">
-                        <strong className="block">
-                          {label} ({seenCount}/{group.length})
-                        </strong>
-                        <ul className="ml-4 list-disc">
-                          {group
-                            .filter(s => seen.has(s.id))
-                            .map(s => (
-                              <li key={s.id}>{s.name}</li>
-                            ))}
-                        </ul>
-                      </div>
-                    );
-                  })}
-                  {Object.keys(rarityGroups).length === 0 && (
-                    <p className="text-gray-500 italic">No Snoopy drops yet</p>
-                  )}
-                </div>
-              )}
-            </div>
           </div>
 
           {/* Button */}
@@ -117,6 +71,46 @@ function App() {
         </div>
 
         <SnoopyCard snoopy={current} />
+
+        {/* Seen Snoopys Grid */}
+        <div className="mt-10 text-left">
+          {rarityOrder.map(label => {
+            const group = rarityGroups[label];
+            if (!group) return null;
+
+            return (
+              <div key={label} className="mb-6">
+                <h2 className="text-lg font-bold mb-2">{label}</h2>
+                <div className="flex flex-wrap gap-4">
+                  {group.map(s => {
+                    const unlocked = seen.has(s.id);
+                    return (
+                      <div
+                        key={s.id}
+                        className="flex flex-col items-center w-20 text-xs"
+                      >
+                        <div
+                          className={`w-16 h-16 rounded-full overflow-hidden border border-gray-300 bg-white relative`}
+                        >
+                          <img
+                            src={s.image}
+                            alt=""
+                            className={`w-full h-full object-cover transition-all duration-300 ${
+                              unlocked ? '' : 'blur-md brightness-75'
+                            }`}
+                          />
+                        </div>
+                        <span className="mt-1 text-center font-medium">
+                          {unlocked ? s.name : '???'}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
