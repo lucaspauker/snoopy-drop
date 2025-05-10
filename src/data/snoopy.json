@@ -1,0 +1,195 @@
+[
+  {
+    "id": "generic",
+    "name": "Generic Snoopy",
+    "mood": "Chill",
+    "rarity": 0,
+    "quote": "Just being cool",
+    "image": "/images/snoopy/generic.png"
+  },
+  {
+    "id": "charlie-hug",
+    "name": "Charlie Hug",
+    "mood": "Happy",
+    "rarity": 0.4,
+    "quote": "<3",
+    "image": "/images/snoopy/charlie-hug.jpg"
+  },
+  {
+    "id": "painter",
+    "name": "Painter Snoopy",
+    "mood": "Creative",
+    "rarity": 0.3,
+    "quote": "Bob Ross had more hair",
+    "image": "/images/snoopy/painter.jpg"
+  },
+  {
+    "id": "jazz",
+    "name": "Jazz Snoopy",
+    "mood": "Cool",
+    "rarity": 0.6,
+    "quote": "Doobadeebuda",
+    "image": "/images/snoopy/jazz.jpg"
+  },
+  {
+    "id": "crochet",
+    "name": "Crochet Snoopy",
+    "mood": "Y(e)arning",
+    "rarity": 0.7,
+    "quote": "Stitched with love",
+    "image": "/images/snoopy/crochet.png"
+  },
+  {
+    "id": "Mafalda",
+    "name": "Mafalda and Snoopy",
+    "mood": "Pals",
+    "rarity": 0.99,
+    "quote": "Hola Mafalda",
+    "image": "/images/snoopy/mafalda.png"
+  },
+  {
+    "id": "Comfy",
+    "name": "Comfy Snoopy",
+    "mood": "Relaxing",
+    "rarity": 0.8,
+    "quote": "What is the best final destination?",
+    "image": "/images/snoopy/comfy.png"
+  },
+  {
+    "id": "doghouse",
+    "name": "Doghouse Snoopy",
+    "mood": "Relaxing",
+    "rarity": 0.6,
+    "quote": "Zzzzzzzzz",
+    "image": "/images/snoopy/doghouse.png"
+  },
+  {
+    "id": "tokyo-sign",
+    "name": "Snoopy Tokyo Sign",
+    "mood": "Looking",
+    "rarity": 0.8,
+    "quote": "Only the worthy may enter",
+    "image": "/images/snoopy/tokyo-sign.png"
+  },
+  {
+    "id": "mug",
+    "name": "Snoopy Mug",
+    "mood": "Mug",
+    "rarity": 0.7,
+    "quote": "A beagle and his brew",
+    "image": "/images/snoopy/mug.png"
+  },
+  {
+    "id": "realistic",
+    "name": "Realistic Snoopy",
+    "mood": ".-.",
+    "rarity": 0.9,
+    "quote": "Creepy?",
+    "image": "/images/snoopy/realistic.png"
+  },
+  {
+    "id": "realistic-woodstock",
+    "name": "Realistic Woodstock",
+    "mood": "Where is snoopy?",
+    "rarity": 0.99,
+    "quote": "I am a real bird",
+    "image": "/images/snoopy/realistic-woodstock.png"
+  },
+  {
+    "id": "dancing",
+    "name": "Dancing Snoopy",
+    "mood": "Happy",
+    "rarity": 0.6,
+    "quote": "I don't need tap shoes",
+    "image": "/images/snoopy/dancing.png"
+  },
+  {
+    "id": "standing",
+    "name": "Standing Snoopy",
+    "mood": "Cool",
+    "rarity": 0.1,
+    "quote": "Where is my food",
+    "image": "/images/snoopy/standing.png"
+  },
+  {
+    "id": "tennis",
+    "name": "Tennis Snoopy",
+    "mood": "Locked in",
+    "rarity": 0.4,
+    "quote": "Serving",
+    "image": "/images/snoopy/tennis.jpg"
+  },
+  {
+    "id": "ecstatic",
+    "name": "Ecstatic Snoopy",
+    "mood": "Very happy",
+    "rarity": 0.2,
+    "quote": "Woooooo",
+    "image": "/images/snoopy/ecstatic.png"
+  },
+  {
+    "id": "lounging",
+    "name": "Lounging Snoopy",
+    "mood": "Relaxed",
+    "rarity": 0.2,
+    "quote": "Does this seat recline any more?",
+    "image": "/images/snoopy/lounging.png"
+  },
+  {
+    "id": "cool",
+    "name": "Cool Snoopy",
+    "mood": "Chilling",
+    "rarity": 0.6,
+    "quote": "sup",
+    "image": "/images/snoopy/cool.jpg"
+  },
+  {
+    "id": "sand-angel",
+    "name": "Sand Angel Snoopy",
+    "mood": "Happy",
+    "rarity": 0.6,
+    "quote": "The sand feels nice on my paws",
+    "image": "/images/snoopy/sand-angel.jpg"
+  },
+  {
+    "id": "handstand",
+    "name": "Gymnastics Snoopy",
+    "mood": "Focused",
+    "rarity": 0.75,
+    "quote": "A balanced beagle for a balanced life",
+    "image": "/images/snoopy/handstand.png"
+  },
+  {
+    "id": "sleeping",
+    "name": "Sleeping Snoopy",
+    "mood": "Yawn",
+    "rarity": 0.55,
+    "quote": "A cold snoopy",
+    "image": "/images/snoopy/sleeping.jpg"
+  },
+  {
+    "id": "camp",
+    "name": "Camp Snoopy",
+    "mood": "Adventurous Snoopy",
+    "rarity": 0.7,
+    "quote": "where did woodstock go?",
+    "image": "/images/snoopy/camp.jpg"
+  },
+  {
+    "id": "baby-with-charlie",
+    "name": "Baby Snoopy With Charlie",
+    "mood": "awww",
+    "rarity": 0.98,
+    "quote": "So comfy",
+    "image": "/images/snoopy/baby-with-charlie.jpg"
+  },
+  {
+    "id": "happy",
+    "name": "Happy Snoopy",
+    "mood": "Happy",
+    "rarity": 0.1,
+    "quote": "Curse you, Red Baron!",
+    "image": "/images/snoopy/happy.png"
+  }
+]
+
